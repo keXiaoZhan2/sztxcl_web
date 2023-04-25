@@ -14,11 +14,11 @@ export default defineNuxtRouteMiddleware((to,from)=>{
     }
     // 未绑定手机号
     const phone = user.value?.phone
-    if(!phone && route.name != 'bindphone'){
-        if(process.client){
-            const { message } = createDiscreteApi(["message"])
-            message.error("请先绑定手机号") 
-        }
-        return navigateTo("/bindphone?from="+route.fullPath)
-    }
+    // if(!phone && route.name != 'bindphone'){
+    //     if(process.client){
+    //         const { message } = createDiscreteApi(["message"])
+    //         message.error("请先绑定手机号") 
+    //     }
+    //     return navigateTo("/bindphone?from="+route.fullPath)
+    // }
 })
